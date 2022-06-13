@@ -1,0 +1,19 @@
+docker run --rm -it -v $(pwd):/usr/src --network my-bridge-network sonarsource/sonar-scanner-cli \
+     -D sonar.host.url=http://sonarqube:9000 \
+     -D sonar.projectBaseDir=./school-students/src \
+     -D sonar.sources=. \
+     -D sonar.projectKey=schoolstudents \
+     -D sonar.projectName='School-Students' \
+     -D sonar.login='admin' \
+     -D sonar.password='sonar'
+
+
+
+docker run --rm -it -v $(pwd):/usr/src --network my-bridge-network sonarsource/sonar-scanner-cli \
+     -D sonar.host.url=http://sonarqube:9000 \
+     -D sonar.projectBaseDir=./school-teams/src \
+     -D sonar.sources=. \
+     -D sonar.projectKey=schoolteams \
+     -D sonar.projectName='School-Teams' \
+     -D sonar.login='admin' \
+     -D sonar.password='sonar'

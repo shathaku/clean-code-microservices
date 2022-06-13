@@ -1,0 +1,14 @@
+curl -d '[{"grade":10,"name":"Jai", "age": 15, "prefect": true}, 
+{"grade":11,"name":"Veer", "age": 16, "prefect": false}]' -H 'Content-Type: application/json' localhost:3000/students
+
+
+curl -d '[{"serialNo":1, "role": "Batsman", "playerNumber": 11, "inPlayingEleven": true}, 
+{"serialNo":2, "role": "Bowler", "playerNumber":9, "inPlayingEleven": true}]' -H 'Content-Type: application/json' localhost:4000/team/cricket/players
+
+
+sudo sysctl -w vm.max_map_count=262144
+
+alias kubectl="minikube kubectl --"
+
+eval $(minikube docker-env)
+

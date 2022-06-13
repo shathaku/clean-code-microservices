@@ -1,0 +1,6 @@
+projectKey=schoolstudents
+serverUrl=http://sonarqube:9000
+serverVersion=9.4.0.54424
+dashboardUrl=http://sonarqube:9000/dashboard?id=schoolstudents
+ceTaskId=AYFDWIw_x4ZtforWrqX-
+ceTaskUrl=http://sonarqube:9000/api/ce/task?id=AYFDWIw_x4ZtforWrqX-

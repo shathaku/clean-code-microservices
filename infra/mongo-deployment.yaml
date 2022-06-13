@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: school-mongo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: school-mongo
+  template:
+    metadata:
+      labels:
+        app: school-mongo
+    spec:
+      containers:
+      - name: school-mongo
+        image: mongo:5.0
+        ports:
+        - containerPort: 27017
+        volumeMounts:
+        - name: storage
+          mountPath: /data/db
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: mongo-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: school-mongo-service
+spec:
+  selector:
+    app: school-mongo
+  ports:
+    - port: 27017
+      targetPort: 27017
+

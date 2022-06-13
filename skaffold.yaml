@@ -1,0 +1,22 @@
+apiVersion: skaffold/v2beta28
+kind: Config
+metadata:
+  name: clean-code
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+  - image: sample/school-students
+    context: school-students
+    docker:
+      dockerfile: Dockerfile
+  - image: sample/school-teams
+    context: school-teams
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - infra/students-deployment.yaml
+    - infra/teams-deployment.yaml
+    - infra/mongo-deployment.yaml
