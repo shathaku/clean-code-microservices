@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
-const {getStudent, getAllStudents, postStudent} = require('../controllers')
+const {welcomeStudent, getStudent, getAllStudents, postStudent} = require('../controllers')
 //const teachers = require('./teachers')
 
 router
+  .get('/welcome', welcomeStudent)
   .get('/students', getAllStudents)
   .get('/students/:id', getStudent)
   .post('/students', postStudent)

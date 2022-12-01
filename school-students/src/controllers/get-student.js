@@ -1,3 +1,9 @@
+const makeWelcomeStudent = function () {
+  return function welcomeStudent(req, res) {
+    res.send("Welcome to the school!!")
+  }
+}
+
 const makeGetStudent = function (studentUsecase) {
   return function getStudent(req, res) {
     studentUsecase.findByStudent(req.params.id)
@@ -21,6 +27,7 @@ const makeGetAllStudents = function (studentUsecase) {
 }
 
 module.exports = {
+  makeWelcomeStudent,
   makeGetStudent,
   makeGetAllStudents
 }
