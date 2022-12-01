@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: school-students
-        image: sample/school-students:dev
+        image: shathaku/school-students:v1
         ports:
         - containerPort: 3000
         env:
