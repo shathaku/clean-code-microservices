@@ -36,4 +36,4 @@ spec:
           value: "27017"
         - name: STUDENT_URL
           value: "http://school-students-service:3000"
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent

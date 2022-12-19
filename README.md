@@ -8,15 +8,20 @@ Port forwarding:
 kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8080:80
 
 Other Commands:
-kubectl get svc --namespace=ingress-nginx
+kubectl get svc -n=ingress-nginx
 kubectl get ingress 
 kubectl describe ingress school-ingresss
-kubectl get pods --namespace ingress-nginx 
+kubectl get pods -n ingress-nginx 
 kubectl get svc
 kubectl cluster-info
 
 
 docker tag school-students:latest shathaku/school-students:v2
-docker tag school-teams:latest shathaku/school-teams:v2
 docker push shathaku/school-students:v2
+
+docker tag school-teams:latest shathaku/school-teams:v2
 docker push shathaku/school-teams:v2
+
+
+ArgoCD start:
+kubectl port-forward svc/argocd-server -n argocd 8888:80

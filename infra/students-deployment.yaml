@@ -15,7 +15,7 @@ kind: Deployment
 metadata:
   name: school-students-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: school-students
@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: school-students
-        image: shathaku/school-students:v2
+        image: shathaku/school-students:v1
         ports:
         - containerPort: 3000
         env:
@@ -34,4 +34,4 @@ spec:
           value: school-mongo-service
         - name: MONGO_PORT
           value: "27017"
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
