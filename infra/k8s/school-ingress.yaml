@@ -3,11 +3,12 @@ kind: Ingress
 metadata:
   name: school-ingresss
   annotations:
+    kubernetes.io/ingress.class: nginx
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
-  ingressClassName: nginx
   rules:
-    - http:
+    - host: a7fa7b3af3859424180cf9ae971d6e30-5cea133fdf52cdf5.elb.us-east-1.amazonaws.com
+      http:
         paths:
           - path: /welcome
             pathType: Prefix
