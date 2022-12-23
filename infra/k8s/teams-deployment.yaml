@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: school-teams
-        image: shathaku/school-teams:v2
+        image: shathaku/school-teams:v1
         ports:
         - containerPort: 4000
         env:
