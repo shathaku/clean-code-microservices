@@ -10,13 +10,6 @@ spec:
     - host: a56af63c15c9840d594e1ca4a17f411d-b78290ebcb3d7518.elb.us-east-1.amazonaws.com
       http:
         paths:
-          - path: /welcome
-            pathType: Prefix
-            backend:
-              service:
-                name: school-students-service
-                port:
-                  number: 3000
           - path: /students
             pathType: Prefix
             backend:

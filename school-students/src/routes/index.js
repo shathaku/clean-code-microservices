@@ -5,7 +5,7 @@ const {welcomeStudent, getStudent, getAllStudents, postStudent} = require('../co
 //const teachers = require('./teachers')
 
 router
-  .get('/welcome', welcomeStudent)
+  .get('/students/welcome', welcomeStudent)
   .get('/students', getAllStudents)
   .get('/students/:id', getStudent)
   .post('/students', postStudent)
