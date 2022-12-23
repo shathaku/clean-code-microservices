@@ -7,7 +7,7 @@ metadata:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    - host: a7fa7b3af3859424180cf9ae971d6e30-5cea133fdf52cdf5.elb.us-east-1.amazonaws.com
+    - host: a56af63c15c9840d594e1ca4a17f411d-b78290ebcb3d7518.elb.us-east-1.amazonaws.com
       http:
         paths:
           - path: /welcome
